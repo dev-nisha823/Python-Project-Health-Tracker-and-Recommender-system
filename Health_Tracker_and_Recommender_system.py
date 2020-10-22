@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
 
 
-from covid import Covid #Ctrl + r then pip install Covid
+
+from covid import Covid
 import operator
-import matplotlib.pyplot as plt #Ctrl +r then pip install matplotlib
+import matplotlib.pyplot as plt
 covid = Covid()
 x=str(input("Enter country name"))
 y=covid.get_status_by_country_name(x)
