@@ -1,33 +1,3 @@
-
-
-
-from covid import Covid
-import operator
-import matplotlib.pyplot as plt
-covid = Covid()
-x=str(input("Enter country name"))
-y=covid.get_status_by_country_name(x)
-data1=[]
-data2=[]
-for x in y:
-  data1.append(y[x])
-for x in y.keys():
-    data2.append(x)
-a=data1[2:6]
-b=data2[2:6]
-new = dict(zip(b, a))
-print(new)
-new_d = sorted(new.items(), key=operator.itemgetter(1))
-di={}
-for a, b in new_d:
-     di.setdefault(a, []).append(b)
-keys_values = di.items()
-new_d2 = {str(key): str(value) for key, value in keys_values }
-keys =new_d2.keys()
-values = new_d2.values()
-plt.bar(keys,values)
-plt.show()
-
 from tkinter import *
 def plot():
     from covid import Covid
