@@ -24,7 +24,6 @@ def plot():
     values = new_d2.values()
     plt.bar(keys,values)
     plt.show()
-
 root=Tk()
 frame2=Frame(root,borderwidth=2,relief=SUNKEN,bg="lightblue")
 frame2.grid(padx=23,pady=55)
